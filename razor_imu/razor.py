@@ -94,8 +94,8 @@ class imuMsg(Node):
         self.ser = serial.Serial('/dev/ttyACM0', 115200, timeout=0.1)         # 1/timeout is the frequency at which the port is read
         # set output mode
         self.ser.write(('#ox').encode("utf-8"))
-        #wait for 5 seconds
-        time.sleep(5)
+        #wait for 1 seconds
+        time.sleep(1)
     
     def timer_callback(self):
         #get data from imu
